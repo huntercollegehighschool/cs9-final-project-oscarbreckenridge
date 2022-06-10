@@ -30,5 +30,23 @@ def enterbuilding():
   if choice == F:
     form()
 
+def form():
+  print("You have waited in line and it is now your turn at the laptop. A google form is open to fill out your ID number")
+  choice = input("Enter your graduating class.")
+  if choice >= 2022:
+    idnumber = input("Enter your number without the graduating class.")
+    if idnumber > 0:
+      tapid()
+    else:
+      print("You have been deemed not a student of Hunter College High School. The security guards grab you by your arm and escort you out of the building. They throw you into Madison Avenue where you are run over by the M1 Bus. Battered and bruised, you return home for the day. Try again!")
+      start()
+  else:
+    print("You have been deemed not a student of Hunter College High School. The security guards grab you by your arm and escort you out of the building. They throw you into Madison Avenue where you are run over by the M1 Bus. Battered and bruised, you return home for the day. Try again!")
+    start()
 def tapid():
-  print("You have now entered the building. After (\hopefully)\ wishing the security guards good morning, you make your way up the stairs to your locker. As a seventh grader, you only have three classes before lunch.")
+  print("You have been granted access to enter the building. After (\hopefully)\ wishing the security guards good morning, you make your way up the stairs to your locker. As a seventh grader, you only have three classes before lunch.")
+choice = input("Enter C to go to class, S to skip class.")
+if choice == C:
+  classmorning()
+if choice == S:
+  skipclass()
