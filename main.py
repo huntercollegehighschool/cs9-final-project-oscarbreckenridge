@@ -43,6 +43,7 @@ def form():
   else:
     print("You have been deemed not a student of Hunter College High School. The security guards grab you by your arm and escort you out of the building. They throw you into Madison Avenue where you are run over by the M1 Bus. Battered and bruised, you return home for the day. Try again!")
     start()
+
 def tapid():
   print("You have been granted access to enter the building. After (\hopefully)\ wishing the security guards good morning, you make your way up the stairs to your locker. As a seventh grader, you only have three classes before lunch.")
 choice = input("Enter C to go to class, S to skip class.")
@@ -50,3 +51,39 @@ if choice == C:
   classmorning()
 if choice == S:
   skipclass()
+
+def skipclass():
+  print("You have chosen to skip class. Do you want to spend your class period(\s)\ at the library or in the locker hallway?")
+  choice = input("Enter L to go to the library, W to go to the locker hallway.")
+  if choice == L:
+    library()
+  if choice == W:
+    lockerhallway()
+
+def classmorning():
+  print("You have arrived at your first morning of classes! Make sure to stay awake, take notes, and participate!")
+  lunch()
+
+def lunch():
+  print("10:30 AM")
+  print("You have survived your first three classes and it is now lunch period. You follow a new friend to Little Luzzo's to get a $6 special. You bring your pizza to the turf to eat.")
+  print("Once you have eaten, your friend invites you to play in a pickup basketball game.")
+  choice = input("Enter P to play. R to reject the invite")
+  if choice == P:
+    basketball()
+  if choice == R:
+    print("You have rejected your friend's offer to play basketball. Once Activities period starts, you witness the kids get kicked off the court by some seniors who didn't make the Varsity Team.")
+    print("At 11:50, you make your way towards the school building for your afternoon classes.")
+    classafternoon()
+
+def basketball():
+  print("You have joined the basketball game! As a casual player you contribute to your team by playing good defense, passing the ball, and giving players that make shots high-fives. A player on the other team sets a screen on your teammate, and you switch onto defending middle school basketball team star Schmeel Schmathur")
+  print("Schmeel calls an isolation on you, calling you trash. Do you stay on defense or call for help defense?")
+  choice = input("Enter O to stay in isolation against Schmeel, D to call for help defense.")
+  if choice == O:
+    iso()
+  if choice == D:
+    helpdefense()
+
+start()
+variables used: B H I F C S L W P R O D
