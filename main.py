@@ -22,6 +22,7 @@ def gohome():
   print("You went home, went to sleep, and woke up the next day. Try again!")
   start()
 
+
 def enterbuilding():
   print("You have entered the building. You need to tap your student ID on the scanner, or fill out the google form to enter if your ID is not on you.")
   choice = input("Enter I to tap your ID, F to fill out the form.")
@@ -60,13 +61,21 @@ def skipclass():
   if choice == W:
     lockerhallway()
 
+def library():
+  print("You decide to go to the library during your class time. While this may not be the smartest decision, as you haven't actually learned anything in class yet that you could study, but you use this time wisely and finish up your homework for the coming night. You work in the back corner of the Quiet Study room, and aren't noticed.")
+  print("10:30 AM.")
+  lunch()
+
+def lockerhallway():
+
 def classmorning():
   print("You have arrived at your first morning of classes! Make sure to stay awake, take notes, and participate!")
+  print("10:30 AM.")
+  print("You have survived your first three classes.")
   lunch()
 
 def lunch():
-  print("10:30 AM")
-  print("You have survived your first three classes and it is now lunch period. You follow a new friend to Little Luzzo's to get a $6 special. You bring your pizza to the turf to eat.")
+  print("It is now lunch period. You follow a new friend to Little Luzzo's to get a $6 special. You bring your pizza to the turf to eat.")
   print("Once you have eaten, your friend invites you to play in a pickup basketball game.")
   choice = input("Enter P to play. R to reject the invite")
   if choice == P:
@@ -86,4 +95,4 @@ def basketball():
     helpdefense()
 
 start()
-variables used: B H I F C S L W P R O D
+#variables used: B H I F C S L W P R O D
