@@ -22,7 +22,6 @@ def gohome():
   print("You went home, went to sleep, and woke up the next day. Try again!")
   start()
 
-
 def enterbuilding():
   print("You have entered the building. You need to tap your student ID on the scanner, or fill out the google form to enter if your ID is not on you.")
   choice = input("Enter I to tap your ID, F to fill out the form: ")
@@ -60,7 +59,7 @@ def skipclass():
     lockerhallway()
 
 def tapid():
-  print("You have been granted access to enter the building. After hopefully wishing the security guards good morning, you make your way up the stairs to your locker. As a seventh grader, you only have three classes before lunch.")
+  print("You have been granted access to enter the building. After hopefully wishing the security guards good morning, you make your way up the stairs to your locker. As a seventh grader, you only have three classes before lunch, in rooms 424, 308, and 206")
   choice = input("Enter C to go to class, S to skip class: ")
   if choice == "C":
     classmorning()
@@ -73,9 +72,24 @@ def library():
   lunch()
 
 def lockerhallway():
-    print("here's some random stuff")
+  print("You have decided to spend your class time in your locker hallway. You are on your phone, eating a snack you brought when a teacher confronts you.")
+  print("Teacher: \"Excuse me, you can't eat in the locker hallway. What classroom are you supposed to be in?\"")
+  choice = int(input("Enter a room number, or enter 0 to say you have a free period. "))
+  if choice == 424 or choice == 308 or choice == 206:
+    print("Teacher: \"Why aren't you in the class right now? Do you need me to show you where it is?\"")
+    print("The teacher shows you to your classroom. You tell the teacher you got lost, and they say it isn't a problem and direct you to your seat.")
+    classmorning()
+  if choice >= 202 and choice < 434 and choice != 424 and choice != 308 and choice != 206:
+    print("Teacher: \"Why aren't you in the class right now? Are you lost? Let me show you where the room is.\"")
+    print("The teacher leads you to the classroom. As you walk in, you are faced with a class full of laughing Juniors and a confused math teacher.")
+    print("You: \"I..I think I'm in the wrong class.... Sorry, It's my first day here.")
+    print("You sprint out of the classroom and spend the next few minutes finding the assigned class on your schedule.")
+    print("You have finally found the classroom. You tell the teacher you got lost, and they say it isn't a problem and direct you to your seat.")
+    classmorning()
+  if choice == 0:
+    print("You: \"I have a free period right now\"")
+    print("Teacher: \"Oh, well in that case continue one with whatever you were doing. Just put the food away, please.\"")
     lunch()
-
 
 def lunch():
   print("It is now lunch period. You follow a new friend to Little Luzzo's to get a $6 special. You bring your pizza to the turf to eat.")
@@ -93,9 +107,11 @@ def basketball():
   print("Schmeel calls an isolation on you, calling you trash. Do you stay on defense or call for help defense?")
   choice = input("Enter O to stay in isolation against Schmeel, D to call for help defense: ")
   if choice == "O":
-    iso()
+    print("The other members of both teams clear out of the way for the iso. Schmeel crosses to the left, then back to the right, then uses a hesitation move. As he drives towards the basket, you move to stay with him, but he unleashes a vicious crossover that has you falling to the ground. He steps back to the three point line and drains one in your face. He proceeds to step over your body while you are on the ground.")
+    print("As you try to get up, with everyone in the courtyard getting hype over the crazy move, you notice your ankle isn't aligned with the rest of your leg. You let out a scream.")
+    print("Hours later, you wake up in the emergency room of the nearby hospital.")
   if choice == "D":
-    helpdefense()
+    print()
 
 start()
 #variables used: B H I F C S L W P R O D
