@@ -92,7 +92,7 @@ def lockerhallway():
     lunch()
 
 def lunch():
-  print("It is now lunch period. You follow a new friend to Little Luzzo's to get a $6 special. You bring your pizza to the turf to eat.")
+  print("It is now lunch period. You follow a new friend to Little Luzzo's to get a $5 special. You bring your pizza to the turf to eat.")
   print("Once you have eaten, your friend invites you to play in a pickup basketball game.")
   choice = input("Enter P to play. R to reject the invite: ")
   if choice == "P":
@@ -103,15 +103,29 @@ def lunch():
     classafternoon()
 
 def basketball():
-  print("You have joined the basketball game! As a casual player you contribute to your team by playing good defense, passing the ball, and giving players that make shots high-fives. A player on the other team sets a screen on your teammate, and you switch onto defending middle school basketball team star Schmeel Schmathur")
-  print("Schmeel calls an isolation on you, calling you trash. Do you stay on defense or call for help defense?")
-  choice = input("Enter O to stay in isolation against Schmeel, D to call for help defense: ")
+  print("You have joined the basketball game! As a casual player you contribute to your team by playing good defense, passing the ball, and giving players that make shots high-fives. A player on the other team sets a screen on your teammate, and you switch onto defending middle school basketball team star Sneel Smathur")
+  print("Sneel calls an isolation on you, calling you trash. Do you stay on defense or call for help defense?")
+  choice = input("Enter O to stay in isolation against Sneel, D to call for help defense: ")
   if choice == "O":
-    print("The other members of both teams clear out of the way for the iso. Schmeel crosses to the left, then back to the right, then uses a hesitation move. As he drives towards the basket, you move to stay with him, but he unleashes a vicious crossover that has you falling to the ground. He steps back to the three point line and drains one in your face. He proceeds to step over your body while you are on the ground.")
+    print("The other members of both teams clear out of the way for the iso. Sneel crosses to the left, then back to the right, then uses a hesitation move. As he drives towards the basket, you move to stay with him, but he unleashes a vicious crossover that has you falling to the ground. He steps back to the three point line and drains one in your face. He proceeds to step over your body while you are on the ground.")
     print("As you try to get up, with everyone in the courtyard getting hype over the crazy move, you notice your ankle isn't aligned with the rest of your leg. You let out a scream.")
     print("Hours later, you wake up in the emergency room of the nearby hospital.")
+    print("Obviously, you cannot return to school today. When you return home, you look on Instagram and see that a video of Sneel crossing you up has gone viral on multiple basketball highlight pages. You contemplate leaving the school altogether, but decide it would be best to stick with it. Try again!")
+    start()
   if choice == "D":
-    print()
+    print("Sneel: \"Look, the 7 is scared!\"")
+    print("Some kids chuckle at what Sneel says, but the game carries on. Congratulations, you managed to avoid being embarrassed on your first day at Hunter. When activities starts, a group of seniors who didn't make the Varsity Basketball team come to kick you off the court. You relax for the rest of your lunch period and head to class at 11:50.")
+    classafternoon()
+
+def classafternoon():
+  print("You have made your way to afternoon classes. You have a period of gym and then three academic classes.")
+  print("When you arrive to gym, you realize that all of your classmates are wearing the grey and black Hunter PE uniform. Your teacher notices you are the odd one out and comes up to you.")
+  print("Gym Teacher: \"Why don't you have your uniform?\"")
+  print("You explain to the gym teacher that you didn't realize you needed a uniform, and will bring it next class.")
+  print("Gym Teacher: \"No worries, kid. Just have it for next class and I'll give you some spare shorts for the period.\"")
+  print("You put on the size Adult XL shorts the teacher gives you. A few kids in your class laugh but you end up enjoying the class. The rest of your classes for the day go smoothly, you take good notes and are only cold called on once.")
+  print("Congratulations on surviving your first day at Hunter!! Go home, do your homework, and come back tomorrow!")
 
 start()
-#variables used: B H I F C S L W P R O D
+
+# Note: The minimum amount of choices one can make is 4, the maximum without restarting is 7
